@@ -17,15 +17,6 @@ class AddSuspense
     insertion = "..." + "\n." * (newline_length/2) + ".."
     last_word = split_tweet.pop
     split_tweet.join(" ") + insertion + last_word
-
-    #split into array of words
-    #between last word and preceding text
-      #add ...
-      #add 134-tweet_length returns
-      #add ...
-      #smush it all back together
-
-
     #returns a more suspensful version of the tweet
   end
 end
@@ -46,7 +37,5 @@ end
 
 ##TODO
 ##deal with length better
-##deploy to heroku
-##push to github
-##deploy to heroku
+
 
