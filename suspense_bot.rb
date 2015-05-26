@@ -1,15 +1,14 @@
 require 'chatterbot/dsl'
 require 'pry'
-require 'yaml'
+require 'dotenv'
 require_relative 'add_suspense'
+Dotenv.load
 
-keys = YAML.load_file('application.yml')
 
-consumer_key keys['CONSUMER_KEY']
-consumer_secret keys['CONSUMER_SECRET']
-token keys['ACCESS_TOKEN']
-secret keys['ACCESS_TOKEN_SECRET']
-
+consumer_key ENV['CONSUMER_KEY']
+consumer_secret ENV['CONSUMER_SECRET']
+token ENV['ACCESS_TOKEN']
+secret ENV['ACCESS_TOKEN_SECRET']
 
 
 loop do
